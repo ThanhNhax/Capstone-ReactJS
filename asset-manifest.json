@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/the_shoes_shop/static/css/main.c69f2b23.css",
+    "main.js": "/the_shoes_shop/static/js/main.526febbe.js",
+    "index.html": "/the_shoes_shop/index.html",
+    "main.c69f2b23.css.map": "/the_shoes_shop/static/css/main.c69f2b23.css.map",
+    "main.526febbe.js.map": "/the_shoes_shop/static/js/main.526febbe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c69f2b23.css",
+    "static/js/main.526febbe.js"
+  ]
+}

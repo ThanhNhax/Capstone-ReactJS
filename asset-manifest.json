@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/the_shoes_shop/static/css/main.c69f2b23.css",
-    "main.js": "/the_shoes_shop/static/js/main.526febbe.js",
-    "index.html": "/the_shoes_shop/index.html",
-    "main.c69f2b23.css.map": "/the_shoes_shop/static/css/main.c69f2b23.css.map",
-    "main.526febbe.js.map": "/the_shoes_shop/static/js/main.526febbe.js.map"
+    "main.css": "/Capstone-ReactJS/static/css/main.c69f2b23.css",
+    "main.js": "/Capstone-ReactJS/static/js/main.526febbe.js",
+    "index.html": "/Capstone-ReactJS/index.html",
+    "main.c69f2b23.css.map": "/Capstone-ReactJS/static/css/main.c69f2b23.css.map",
+    "main.526febbe.js.map": "/Capstone-ReactJS/static/js/main.526febbe.js.map"
   },
   "entrypoints": [
     "static/css/main.c69f2b23.css",

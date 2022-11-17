@@ -29,9 +29,8 @@ export default function Header(props) {
         <div className="header_top row">
           <NavLink to="/" className="logo col-6">
             <img
-              src="./img/image 3.svg
-            "
-              alt="..."
+              src="https://cybersoft.edu.vn/wp-content/uploads/2022/10/cyberlogo-white.png"
+              alt=""
             />
           </NavLink>
           <div className="header_right col-6">

@@ -11,7 +11,7 @@
             tr {
                 th {
                     @include text ($fs-m, $fw-4, $lh-24, $c-dark);
-
+                    text-transform: uppercase
                 }
             }
         }

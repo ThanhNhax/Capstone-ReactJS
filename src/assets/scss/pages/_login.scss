@@ -25,7 +25,7 @@
 
             .error_text {
 
-                @include text ($fs-m, $fw-5, $lh-24, RED)
+                @include text ($fs-m, $fw-5, $lh-24, RED);
             }
         }
 
@@ -33,7 +33,6 @@
 
 
             input {
-                // background-color: aqua;
                 border-right: none;
                 background: $c-white;
             }
@@ -53,10 +52,10 @@
                 align-items: center;
                 gap: 200px;
 
-                @media screen and(max-width:578px) {
-                    flex-direction: column;
-                    gap: 0px;
-                }
+                // @media screen and(max-width:578px) {
+                //     flex-direction: column;
+                //     gap: 0px;
+                // }
 
                 a {
                     margin: 20px 0;

@@ -23,9 +23,9 @@
         }
 
         .product_title {
-            @media screen and(max-width: 576px) {
-                padding: 0px 25px;
-            }
+            // @media screen and(max-width: 576px) {
+            //     padding: 0px 25px;
+            // }
 
             h1 {
                 @include text($fs-xl, $fw-3, $lh-36, $c-dark);

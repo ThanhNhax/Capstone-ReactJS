@@ -1,53 +1,117 @@
 .card {
-    max-height: 600px;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
 
-    img {
-        position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eabf25;
+        clip-path: circle(150px at 80% 20%);
+        transition: 0.5s ease-in-out;
+
     }
 
-    .feature {
-        position: absolute;
-        top: 30px;
-        right: 50px;
-        font-size: 30px;
-        color: rgba(0, 0, 0, 0.1);
+    &:hover {
+        &::before {
+            clip-path: circle(300px at 40% -20%);
+        }
+
+        .card .card-body a {
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: .7s;
+        }
+
+        .card-body p {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .card-img {
+            top: 0%;
+            transform: translateY(-25%);
+        }
+
+        .card-body {
+            height: 210px;
+        }
+
+        .card-body a {
+            opacity: 1;
+            transform: translateY(0px);
+            transition-delay: .7s;
+            position: relative;
+            z-index: 1;
+        }
     }
 
-    .feature_like {
+    .card-img {
         position: absolute;
-        top: 30px;
-        right: 50px;
-        font-size: 30px;
-        color: red;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-20deg);
+            width: 270px;
+        }
     }
 
     .card-body {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        transition: 1s;
+        z-index: 90;
+
         h3 {
-            @include text($fs-l, $fw-3, $lh-29, $c-dark)
+            @include text($fs-l, $fw-5, $lh-29, $c-white)
         }
+
+
+
 
         p {
-            @include text($fs-m, $fw-3, $lh-24, $c-gray-cb)
+            color: white;
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin: 0px;
+            opacity: 0;
+            transition: .5s;
+            height: 75px;
         }
 
-        div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: $bg-gray-c;
-
-            a {
-                width: 50%;
-                @include button($fs-l, $fw-4, $lh-29, $c-dark, $bg-yew, 10px, none, none, $c-white, $c-dark);
-            }
-
-            p {
-                margin: 0;
-                width: 50%;
-                text-align: center;
-                @include text($fs-l, $fw-6, $lh-29, $c-dark);
-
-            }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 4px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #111;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: .5s;
+            cursor: pointer;
+            z-index: 10;
         }
     }
 }

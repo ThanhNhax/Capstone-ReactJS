@@ -81,11 +81,9 @@
         z-index: 90;
 
         h3 {
-            @include text($fs-l, $fw-5, $lh-29, $c-white)
+            @include text($fs-l, $fw-5, $lh-29, $c-white);
+            height: 60px;
         }
-
-
-
 
         p {
             color: white;
@@ -95,7 +93,7 @@
             margin: 0px;
             opacity: 0;
             transition: .5s;
-            height: 75px;
+            height: 50px;
         }
 
         a {

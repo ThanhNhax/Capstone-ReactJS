@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -13,7 +14,7 @@ export default function Home() {
         dispatch(action);
     }, []);
     return (
-        <div className=" home">
+        <div className="home container">
             <div
                 id="carouselExampleControls"
                 className="carousel slide"
@@ -53,8 +54,7 @@ export default function Home() {
                                     <div className="col-8 product_img">
                                         <img
                                             src={prod?.image}
-                                            className=" "
-                                            alt="..."
+                                            alt={prod?.image}
                                         />
                                     </div>
                                     <div className="tital col-4  ">
@@ -101,13 +101,13 @@ export default function Home() {
                 </button>
             </div>
 
-            <div className="feature-home container">
+            <div className="feature-home ">
                 <h2 className="">Product Feature </h2>
 
-                <div className="row">
+                <div className="gird-containar">
                     {arrProduct.map((prod, index) => {
                         return (
-                            <div className="col-4 mt-3" key={index}>
+                            <div className="card-item" key={index}>
                                 <Product product={prod} />
                             </div>
                         );

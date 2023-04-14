@@ -1,11 +1,14 @@
 header {
-    .container-fluid {
+    background: #000;
+    width: 100%;
+
+    .container {
 
         .header_top {
-            background: #000;
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            margin: 0;
 
             .logo {
                 margin: 10px 0px 8px 0px;

@@ -42,13 +42,6 @@ header {
                         @include text($fs-l, $fw-3, $lh-19, $c-white);
                     }
                 }
-
-                .dropdown-bar-mobile {
-                    display: none;
-                    text-align: right;
-                    font-size: 24px;
-                    color: $c-white;
-                }
             }
         }
 
@@ -62,10 +55,6 @@ header {
             .content {
                 background-color: red;
                 display: none !important;
-            }
-
-            .dropdown-bar-mobile {
-                display: block !important;
             }
         }
     }

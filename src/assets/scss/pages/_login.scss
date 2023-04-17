@@ -2,7 +2,7 @@
     margin-top: 60px;
 
     h2 {
-        @include text ($fs-2xl, $fw-4, $lh-48, $c-dark)
+        @include text ($fs-2xl, $fw-7, $lh-48, $c-dark)
     }
 
     hr {
@@ -15,12 +15,12 @@
 
         .form-group {
             p {
-                @include text ($fs-m, $fw-5, $lh-24, rgba(0, 0, 0, 0.6))
+                @include text ($fs-m, $fw-5, $lh-24, rgba(0, 0, 0, 0.6));
+                margin-bottom: 10px;
             }
 
             input {
                 background: $c-white;
-
             }
 
             .error_text {
@@ -45,45 +45,23 @@
 
 
         .form-bottom {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
-            div {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                gap: 200px;
-
-                // @media screen and(max-width:578px) {
-                //     flex-direction: column;
-                //     gap: 0px;
-                // }
-
-                a {
-                    margin: 20px 0;
-                    @include text ($fs-m, $fw-5, $lh-24, rgba(21, 42, 235, 0.8))
-                }
-
-                input {
-                    background: rgba(33, 33, 33, 0.08);
-                }
-
-                button {
-                    margin: 20px 0;
-                    gap: 10px;
-                    @include button ($fs-m, $fw-4, $lh-24, $c-white, #6200EE, 16px 40px, none, 20px, $bg-pupble, $c-dark);
-
-
-
-                    span {
-                        margin-left: 10px;
-                    }
-                }
-
-
+            a {
+                margin: 20px 0;
+                @include text ($fs-m, $fw-5, $lh-24, rgba(21, 42, 235, 0.8));
+                border: 1px solid rgba(21, 42, 235, 0.8);
+                padding: 15px 20px;
+                border-radius: 16px;
             }
 
-            .facebook {
-                display: block;
-                text-align: center;
+            button {
+                margin: 20px 0;
+                gap: 10px;
+                @include button ($fs-m, $fw-6, $lh-24, $c-white, #eabf25, 16px 40px, 1px solid #eabf25, 16px, rgba(0, 0, 0, 0), #eabf25);
             }
         }
     }

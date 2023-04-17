@@ -5,36 +5,94 @@
 
         h1 {
             text-align: center;
-            @include text ($fs-2xl, $fw-4, $lh-48, $c-dark);
+            @include text ($fs-2xl, $fw-6, $lh-48, $c-dark);
         }
 
+
         form {
+            padding-top: 20px;
 
-            .row {
-                .col-6 {
-                    div {
-                        padding: 10px 0;
+            .gird-container {
+                display: grid;
+                gap: 20px 10px;
+                align-items: center;
+                grid-template-areas:
+                    "email name"
+                    "password phone"
+                    "passwordC gender";
 
-                        p {}
-
-                        input {}
-
-
+                .form-group {
+                    p {
+                        margin-bottom: 10px;
                     }
 
-                    .gender {
-                        align-items: center;
+                    .error_text {
+                        color: red;
+                        font-weight: 500;
                     }
 
-                    button {
-                        @include button ($fs-xl, $fw-4, $lh-36, $c-white, $bg-pupble-ae, 10px 50px, 1px solid, none, $bg-pupble-ae, $c-white );
-
+                    &:first-child {
+                        grid-area: email;
                     }
+
+                    &:nth-child(2) {
+                        grid-area: password;
+                    }
+
+                    &:nth-child(3) {
+                        grid-area: passwordC;
+                    }
+
+                    &:nth-child(4) {
+                        grid-area: name;
+                    }
+
+                    &:nth-child(5) {
+                        grid-area: phone;
+                    }
+
+                    &:nth-child(6) {
+                        grid-area: gender;
+                    }
+
                 }
 
+                .gender {
+                    align-items: center;
+                    justify-content: center;
+
+                    p {
+                        margin: 0;
+                    }
+                }
             }
 
+            button {
+                display: block;
+                margin: 20px auto 0px;
+                @include button ($fs-xl, $fw-6, $lh-36, $c-white, #eabf25, 10px 50px, 1px solid #eabf25, 16px, rgba(0, 0, 0, 0), #eabf25);
+            }
+        }
+    }
+}
 
+
+//responsive
+
+// mobile 
+@media screen and (min-width: 320px) {
+    .regitster .container form {
+        margin-bottom: 40px;
+
+        .gird-container {
+            grid-template-areas:
+                "email"
+                "name"
+                "password"
+                "phone"
+                "passwordC"
+                "gender";
+            gap: 5px;
         }
     }
 }

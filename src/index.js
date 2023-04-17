@@ -13,7 +13,6 @@ import HomeTemplate from "./templates/HomeTemplate";
 // Cấu hình redux
 import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
-import HomeMobile from "./pages/Home/HomeMobile";
 import ResponsiveItem from "./hoc/ResponsiveItem";
 import HomeTemplateMobile from "./templates/HomeTemplateMobile";
 // Cấu hình react router dom
@@ -37,15 +36,7 @@ root.render(
                         />
                     }
                 >
-                    <Route
-                        index
-                        element={
-                            <ResponsiveItem
-                                component={Home}
-                                componentMobile={HomeMobile}
-                            />
-                        }
-                    ></Route>
+                    <Route index element={<Home />}></Route>
                     <Route path="login" element={<Login />}></Route>
                     <Route path="carts" element={<Carts />}></Route>
                     <Route path="search" element={<Search />}></Route>

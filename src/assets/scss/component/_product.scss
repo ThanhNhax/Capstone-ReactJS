@@ -2,7 +2,6 @@
     position: relative;
     width: 320px;
     height: 450px;
-    background: #232323;
     border-radius: 20px;
     overflow: hidden;
 
@@ -16,7 +15,6 @@
         background: #eabf25;
         clip-path: circle(150px at 80% 20%);
         transition: 0.5s ease-in-out;
-
     }
 
     &:hover {
@@ -33,6 +31,8 @@
         .card-body p {
             opacity: 1;
             visibility: visible;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         .card-img {
@@ -49,7 +49,6 @@
             transform: translateY(0px);
             transition-delay: .7s;
             position: relative;
-            z-index: 1;
         }
     }
 
@@ -78,38 +77,32 @@
         height: 100px;
         text-align: center;
         transition: 1s;
-        z-index: 90;
 
         h3 {
-            @include text($fs-l, $fw-5, $lh-29, $c-white);
+            @include text($fs-l, $fw-5, $lh-29, $c-dark);
             height: 60px;
         }
 
         p {
-            color: white;
-            font-weight: 300;
-            font-size: 14px;
-            letter-spacing: 2px;
+            @include text(14px, $fw-4, $lh-19, $c-dark);
             margin: 0px;
             opacity: 0;
             transition: .5s;
-            height: 50px;
+            height: 45px;
         }
 
         a {
             display: inline-block;
             padding: 10px 20px;
-            background: #fff;
+            background: #eabf25;
             border-radius: 4px;
             margin-top: 10px;
-            text-decoration: none;
             font-weight: 600;
             color: #111;
             opacity: 0;
             transform: translateY(50px);
             transition: .5s;
             cursor: pointer;
-            z-index: 10;
         }
     }
 }

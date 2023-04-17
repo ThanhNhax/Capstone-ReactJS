@@ -2,7 +2,6 @@
     width: 100%;
 
     #carouselExampleControls {
-        height: 530px;
 
         @media (max-width: 1024px) {
             height: 375px !important;
@@ -35,7 +34,6 @@
                 .row {
                     justify-content: center;
                     align-items: center;
-                    height: 530px;
 
                     .product_img {
                         height: 530px;
@@ -79,7 +77,7 @@
     }
 
     .feature-home {
-        padding: 50px 0;
+        margin-bottom: 50px;
 
         h2 {
             @include text ($fs-2xl, $fw-7, $lh-48, $c-dark);
@@ -96,13 +94,19 @@
             justify-content: center;
             align-items: center;
 
-            @media (min-width:960px) {
+            @media screen and (min-width: 320px) {
+                grid-template-columns: repeat(1, auto);
+            }
+
+            @media screen and (min-width: 768px) {
+                grid-template-columns: repeat(2, 320px);
+            }
+
+            /*Ipad ngang(1024 x 768)*/
+            @media screen and (min-width: 1024px) {
                 grid-template-columns: repeat(3, 320px);
             }
 
-            @media (max-width:786px) {
-                grid-template-columns: repeat(2, 320px);
-            }
         }
     }
 

@@ -8,7 +8,7 @@ import {
 import { getStoreJSON, USER_LOGIN } from "../../util/config";
 
 export default function Carts() {
-    const { gioHang, order } = useSelector((state) => state.cartReducer);
+    const { gioHang } = useSelector((state) => state.cartReducer);
     console.log({ gioHang });
     const dispatch = useDispatch();
     const tangGiamSL = (id, bool) => {
@@ -23,7 +23,6 @@ export default function Carts() {
         e.preventDefault();
 
         let { email } = getStoreJSON(USER_LOGIN);
-
         let order = {
             email: email,
             orderDetail: gioHang,
@@ -70,7 +69,7 @@ export default function Carts() {
                                 </td>
                                 <td>{prod.productId}</td>
                                 <td>
-                                    <img src={prod.image} alt="" />
+                                    <img src={prod.image} alt="imas" />
                                 </td>
                                 <td>{prod.name}</td>
                                 <td>{prod.price}</td>

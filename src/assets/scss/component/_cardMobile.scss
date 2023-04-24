@@ -1,0 +1,46 @@
+.cardCartMobile {
+    .cart-img {
+        img {
+            width: 100%;
+        }
+    }
+
+    .cart-title {
+        h3 {
+            @include text ($fs-l, $fw-6, $lh-29, $c-dark);
+        }
+
+        .upDown {
+            display: flex;
+            gap: 10px;
+
+            span {
+                @include text ($fs-m, $fw-4, $lh-19, $c-dark);
+
+                &:first-child,
+                &:last-child {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    background-color: black;
+                    border-radius: 4px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+    }
+
+    .cart-trash {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            border: none;
+            background-color: white;
+        }
+    }
+}

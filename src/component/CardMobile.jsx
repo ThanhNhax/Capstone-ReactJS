@@ -1,27 +1,31 @@
 import React from "react";
 
-export default function CardMobile() {
+export default function CardMobile({ prod, tangGiamSL, deleteCart }) {
     return (
         <div className="cardCartMobile row">
             <div className="col-4 cart-img">
-                <img
-                    src="https://shop.cyberlearn.vn/images/nike-sp-dunk.png"
-                    alt=""
-                />
+                <img src={prod.image} alt="imame" />
             </div>
-            <div className="col-7 cart-title">
-                <h3>Name</h3>
+            <div className="col-6 cart-title">
+                <h3>{prod.name}</h3>
                 <p className="price">
-                    235.000.000 <span>vnd</span>
+                    {prod.price * prod.quantity}
+                    <span>$</span>
                 </p>
                 <div className="upDown">
-                    <span>-</span>
-                    <span>1</span>
-                    <span>+</span>
+                    <span onClick={() => tangGiamSL(prod.productId, false)}>
+                        -
+                    </span>
+                    <span>{prod.quantity}</span>
+                    <span onClick={() => tangGiamSL(prod.productId, true)}>
+                        +
+                    </span>
                 </div>
             </div>
-            <div className="col-1">
-                <i className="far fa-trash-alt"></i>
+            <div className="col-2 cart-trash">
+                <button onClick={() => deleteCart(prod.productId)}>
+                    <i className="far fa-trash-alt"></i>
+                </button>
             </div>
         </div>
     );

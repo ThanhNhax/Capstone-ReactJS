@@ -1,0 +1,23 @@
+.cartMobile {
+    padding-top: 20px;
+
+    h2 {
+        @include text ($fs-xl, $fw-6, $lh-36, $c-dark);
+    }
+
+    .list-item {
+        .notData {
+            text-align: center;
+        }
+    }
+
+    .submitOrder {
+        display: flex;
+        justify-content: end;
+        margin-top: 20px;
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+}

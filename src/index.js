@@ -20,7 +20,6 @@ import HomeTemplateMobile from "./templates/HomeTemplateMobile";
 // Tạo ra 1 biến quản lý chuyển hướng trang
 import { createBrowserHistory } from "history";
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
-import DemoModal from "./hoc/DemoModal";
 import CartMobile from "./pages/Carts/CartMobile";
 export const history = createBrowserHistory();
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -55,7 +54,6 @@ root.render(
                         <Route path=":id" element={<Detail />}></Route>
                     </Route>
                     <Route path="*" element={<Navigate to="" />}></Route>
-                    <Route path="demodal" element={<DemoModal />}></Route>
                 </Route>
             </Routes>
         </HistoryRouter>

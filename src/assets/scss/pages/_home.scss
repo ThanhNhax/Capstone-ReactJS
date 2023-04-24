@@ -65,8 +65,11 @@
 
                             a {
                                 text-align: center;
-                                @include button($fs-l, $fw-4, $lh-29, $c-dark, $bg-yew, 12px 24px, 1px solid, 16px, $c-white, $c-dark);
+                                @include button($fs-l, $fw-6, $lh-29, $c-dark, #eabf25, 10px 20px, 1px solid, 4px, #eabf25, $c-dark);
 
+                                &:hover {
+                                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                                }
                             }
                         }
                     }

@@ -21,6 +21,7 @@
 @import './component/footer';
 @import './component/product';
 @import './component/productMobile';
+@import './component/cardMobile';
 
 //Layouts: Chứa những phần lớn dùng chung như (Header, fooer,... )
 
@@ -32,6 +33,7 @@
 @import './pages/detial';
 @import './pages/search';
 @import './pages/profile';
-@import './pages/homeTemplateMobile'
+@import './pages/homeTemplateMobile';
+@import './pages/cartsMobile';
 
 // Themes: Chứa những theme chủ đạo khác nhau của trang web 

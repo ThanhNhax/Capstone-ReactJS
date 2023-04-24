@@ -51,6 +51,7 @@ export default function Detail() {
                         <button>-</button>
                     </div>
                     <button
+                        className="submit"
                         onClick={() => {
                             themGiohang(productDetail);
                         }}

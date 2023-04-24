@@ -21,6 +21,7 @@ import HomeTemplateMobile from "./templates/HomeTemplateMobile";
 import { createBrowserHistory } from "history";
 import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
 import CartMobile from "./pages/Carts/CartMobile";
+import ProfileMobile from "./pages/Profile/ProfileMobile";
 export const history = createBrowserHistory();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -48,7 +49,15 @@ root.render(
                         }
                     ></Route>
                     <Route path="search" element={<Search />}></Route>
-                    <Route path="profile" element={<Profile />}></Route>
+                    <Route
+                        path="profile"
+                        element={
+                            <ResponsiveItem
+                                component={Profile}
+                                componentMobile={ProfileMobile}
+                            />
+                        }
+                    ></Route>
                     <Route path="register" element={<Register />}></Route>
                     <Route path="detail">
                         <Route path=":id" element={<Detail />}></Route>

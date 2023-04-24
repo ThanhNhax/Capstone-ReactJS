@@ -1,5 +1,5 @@
 .detail {
-    padding: 60px 0;
+    padding: 40px 0;
 
     .row {
         justify-content: space-around;
@@ -17,7 +17,7 @@
                 transition: transform 0.3s;
 
                 &:hover {
-                    transform: scale(130%);
+                    transform: scale(120%);
                 }
             }
         }
@@ -28,7 +28,7 @@
             // }
 
             h1 {
-                @include text($fs-xl, $fw-3, $lh-36, $c-dark);
+                @include text($fs-xl, $fw-6, $lh-36, $c-dark);
             }
 
             p {
@@ -49,7 +49,7 @@
                         $bg-gray-c,
                         10px,
                         none,
-                        none,
+                        4px,
                         $bg-gray-c,
                         $c-dark );
                 }
@@ -67,31 +67,26 @@
                     @include button($fs-l,
                         $fw-6,
                         $lh-29,
+                        white,
                         $c-dark,
-                        $bg-blue,
                         10px 20px,
                         none,
-                        none,
-                        $bg-pupble,
+                        4px,
+                        $bg-gray-c,
                         $c-dark );
                 }
 
                 span {
+                    margin: 0 20px;
                     @include text($fs-xl, $fw-4, $lh-36, $c-dark);
                 }
             }
 
-            button {
-                @include button($fs-l,
-                    $fw-5,
-                    $lh-29,
-                    $c-white,
-                    $bg-pupble,
-                    10px 20px,
-                    none,
-                    none,
-                    rgba(62, 32, 248, 0.9),
-                    $c-white );
+            .submit {
+                display: flex;
+                justify-content: center;
+                @include button($fs-l, $fw-6, $lh-29, $c-dark, #eabf25, 10px 20px, 1px solid, 4px, #eabf25, $c-dark);
+
             }
         }
     }
@@ -102,7 +97,5 @@
             @include text ($fs-2xl, $fw-4, $lh-48, $c-dark);
             text-align: center;
         }
-
-        div {}
     }
 }
